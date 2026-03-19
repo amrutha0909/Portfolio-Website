@@ -358,6 +358,7 @@ nav .btn-primary {
     display: flex;
     align-items: center;
     position: relative;
+    gap: 40px;
 }
 
 .project-card.reverse {
@@ -375,12 +376,12 @@ nav .btn-primary {
 
 .project-image img {
     width: 100%;
-    aspect-ratio: 16/9;
+    aspect-ratio: 3/2;
     object-fit: fill;
     transition: var(--transition);
 }
 
-.project-overlay {
+/* .project-overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -388,7 +389,7 @@ nav .btn-primary {
     height: 100%;
     background-color: rgba(100, 255, 218, 0.3);
     transition: var(--transition);
-}
+} */
 
 .project-image:hover .project-overlay {
     background-color: transparent;
@@ -399,13 +400,10 @@ nav .btn-primary {
     position: relative;
     z-index: 2;
     text-align: right;
-    margin-left: -50px;
 }
 
 .project-card.reverse .project-info {
     text-align: left;
-    margin-left: 0;
-    margin-right: -50px;
 }
 
 .project-type {
@@ -437,7 +435,7 @@ nav .btn-primary {
     margin-bottom: 20px;
     font-family: 'Courier New', Courier, monospace;
     font-size: 0.9rem;
-    color: var(--text-alt);
+    color: var(--highlight);
     list-style-type: none;
 }
 
@@ -535,6 +533,107 @@ nav .btn-primary {
     font-size: 1rem;
 }
 
+.timeline-content.has-image {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.timeline-text {
+    flex: 1;
+}
+
+.timeline-image {
+    flex: 1;
+    max-width: 450px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    background-color: var(--bg-color-alt);
+    box-shadow: 0 4px 15px rgba(2, 12, 27, 0.5);
+    border: 1px solid var(--bg-color-light);
+}
+
+.timeline-image img {
+    width: 100%;
+    display: block;
+    object-fit: contain;
+}
+
+#training .timeline {
+    max-width: 950px;
+}
+
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.certificate-card {
+    background-color: var(--bg-color-alt);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+    transition: var(--transition);
+}
+
+.certificate-card:hover {
+    transform: translateY(-5px);
+    background-color: var(--bg-color-light);
+}
+
+.certificate-image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1.414 / 1;
+    background-color: var(--bg-color-main);
+    overflow: hidden;
+}
+
+.certificate-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.certificate-card:hover .certificate-image img {
+    transform: scale(1.02);
+}
+
+.certificate-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(100, 255, 218, 0.1);
+    transition: var(--transition);
+    pointer-events: none;
+}
+
+.certificate-card:hover .certificate-overlay {
+    background-color: transparent;
+}
+
+.certificate-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.certificate-info h3 {
+    font-size: 1.1rem;
+    color: #e6f1ff;
+    margin-bottom: 10px;
+}
+
+.certificate-info p {
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--highlight);
+    font-size: 0.9rem;
+}
+
 .achievements-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -560,7 +659,7 @@ nav .btn-primary {
 
 .achievement-image {
     width: 100%;
-    aspect-ratio: 16/9;
+    aspect-ratio: 1/1;
     object-fit: fill;
     border-radius: var(--border-radius);
     margin-bottom: 20px;
@@ -619,7 +718,7 @@ footer {
 }
 
 .social-links a {
-    color: var(--text-alt);
+    color: var(--highlight);
     font-size: 1.2rem;
 }
 
@@ -689,5 +788,15 @@ footer p {
 
     .timeline-item {
         padding-left: 40px;
+    }
+
+    .timeline-content.has-image {
+        flex-direction: column;
+    }
+
+    .timeline-image {
+        width: 100%;
+        max-width: 350px;
+        margin-top: 15px;
     }
 }
