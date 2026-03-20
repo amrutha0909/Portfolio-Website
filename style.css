@@ -391,8 +391,12 @@ nav .btn-primary {
     transition: var(--transition);
 } */
 
-.project-image:hover .project-overlay {
+.project-image:hover {
     background-color: transparent;
+}
+
+.project-image:hover img {
+    transform: scale(1.05);
 }
 
 .project-info {
@@ -634,13 +638,65 @@ nav .btn-primary {
     font-size: 0.9rem;
 }
 
+.achievements-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--bg-color-alt);
+    color: var(--highlight);
+    border: 1px solid var(--highlight);
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 10;
+    transition: var(--transition);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.scroll-btn:hover {
+    background: var(--highlight);
+    color: var(--bg-color-main);
+}
+
+.scroll-btn.left {
+    left: -20px;
+}
+
+.scroll-btn.right {
+    right: -20px;
+}
+
 .achievements-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    overflow-x: auto;
     gap: 20px;
+    padding-bottom: 20px;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+/* Custom scrollbar for achievements hidden */
+.achievements-grid::-webkit-scrollbar {
+    display: none;
 }
 
 .achievement-card {
+    flex: 0 0 calc((100% - 40px) / 3);
+    scroll-snap-align: start;
     background-color: var(--bg-color-alt);
     padding: 30px;
     border-radius: var(--border-radius);
@@ -798,5 +854,21 @@ footer p {
         width: 100%;
         max-width: 350px;
         margin-top: 15px;
+    }
+
+    .achievement-card {
+        flex: 0 0 calc((100% - 20px) / 2);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .achievement-card {
+        flex: 0 0 100%;
+    }
+
+    .scroll-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
     }
 }

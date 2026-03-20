@@ -45,7 +45,7 @@
                     Web Development.</p>
                 <div class="hero-actions">
                     <a href="#projects" class="btn-primary">View My Work</a>
-                    <a href="https://drive.google.com/file/d/1B4X2Bmeu9HtFnBp47dqONtcmu22f1WMC/view?usp=drive_link"
+                    <a href="https://drive.google.com/file/d/1hdDBByWVZQzk96pS1EuFRLYSDnICzjJS/view?usp=sharing"
                         target="_blank" rel="noopener noreferrer" class="btn-secondary">Resume <i
                             class="fas fa-file-download"></i></a>
                 </div>
@@ -108,7 +108,7 @@
                     <h3>Frameworks, Tools & Technologies</h3>
                     <ul class="skill-list">
                         <li><i class="fab fa-node-js"></i> Node.js</li>
-                        <li><i class="fas fa-server"></i> Express / Python</li>
+                        <li><i class="fas fa-server"></i> Express</li>
                         <li><i class="fas fa-database"></i> MongoDB / SQL</li>
                         <li><i class="fab fa-spring"></i> Spring Boot</li>
                         <li><i class="fab fa-git-alt"></i> Git & GitHub</li>
@@ -153,7 +153,6 @@
                         <div class="project-links">
                             <a href="https://github.com/amrutha0909/Optimum-Inventory-Control-for-Machine-Spares"><i
                                     class="fab fa-github"></i></a>
-                            <!-- <a href="#"><i class="fas fa-external-link-alt"></i></a> -->
                         </div>
                     </div>
                 </div>
@@ -179,7 +178,6 @@
                         <div class="project-links">
                             <a href="https://github.com/amrutha0909/Airline-Traffic-Management-System"><i
                                     class="fab fa-github"></i></a>
-                            <!-- <a href="#"><i class="fas fa-external-link-alt"></i></a> -->
                         </div>
                     </div>
                 </div>
@@ -224,7 +222,7 @@
                         <div class="timeline-content">
                             <h3>B.Tech in Computer Science Engineering</h3>
                             <h4>Lovely Professional University, Jalandhar, Punjab</h4>
-                            <span class="date">2023 - 2027 (Expected)</span>
+                            <span class="date">August 2023 - Present</span>
                             <p>CGPA: 8.72 </p>
                             <p>Core coursework: DSA, DBMS, OS, CN, OOPs, Web Dev.</p>
                         </div>
@@ -287,7 +285,6 @@
                         <div class="timeline-content has-image">
                             <div class="timeline-text">
                                 <h3>GDG On Campus Solution Challenge | Mentorship</h3>
-                                <!-- <a href="#">Certificate</a> -->
                                 <span class="date">March 2025 - June 2025</span>
                                 <ul class="training-list">
                                     <li>Received one month expert mentorship after standing amongst top 105 teams in the
@@ -321,6 +318,16 @@
                     </div>
                     <div class="certificate-info">
                         <h3>Privacy and Security in Online Social Media</h3>
+                        <p>NPTEL</p>
+                    </div>
+                </div>
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="mongo_cert.png" alt="MongoDB Relational to Document Model">
+                        <div class="certificate-overlay"></div>
+                    </div>
+                    <div class="certificate-info">
+                        <h3>MongoDB Relational to Document Model</h3>
                         <p>NPTEL</p>
                     </div>
                 </div>
@@ -373,29 +380,49 @@
                 <h2><span class="highlight">07.</span> Achievements</h2>
                 <div class="line"></div>
             </div>
-            <div class="achievements-grid fade-in">
-                <div class="achievement-card">
-                    <img src="achievement_jpmc.png" alt="JP Morgan Chase Hackathon" class="achievement-image">
-                    <i class="fas fa-trophy highlight"></i>
-                    <h3>JP Morgan Chase Code for Good 2025 finalist</h3>
-                    <p>Selected among 186 out of 60,000+ applicants to be selected for the Code for Good hackathon.
-                        Built a Milestone Development Tracking project for SpacECE India Foundation as part of the
-                        hackathon. (June 2025)</p>
-                </div>
-                <div class="achievement-card">
-                    <img src="achievement_google.png" alt="Google Solution Challenge" class="achievement-image">
-                    <i class="fas fa-lightbulb highlight"></i>
-                    <h3>Google Solution Challenge 2025 finalist</h3>
-                    <p>Made it to the top 105 teams out of 3000+ teams and 60,000+ applicants with our project on
-                        sustainability and climate change. Received expert mentorship for Google Developer Groups On
-                        Campus. (June 2025)</p>
-                </div>
-                <div class="achievement-card">
-                    <img src="achievement_coding.png" alt="Problem Solving" class="achievement-image">
-                    <i class="fas fa-code highlight"></i>
-                    <h3>Problem Solving</h3>
-                    <p>Solved 500+ data structures and algorithms problems across platforms like LeetCode, Codeforces,
-                        GeeksforGeeks and HackerRank. (January 2026)</p>
+            <div class="achievements-wrapper fade-in">
+                <button class="scroll-btn left" id="achievements-left" aria-label="Scroll Left"><i
+                        class="fas fa-chevron-left"></i></button>
+                <button class="scroll-btn right" id="achievements-right" aria-label="Scroll Right"><i
+                        class="fas fa-chevron-right"></i></button>
+                <div class="achievements-grid" id="achievements-slider">
+                    <div class="achievement-card">
+                        <img src="achievement_jpmc.png" alt="JP Morgan Chase Hackathon" class="achievement-image">
+                        <i class="fas fa-trophy highlight"></i>
+                        <h3>JP Morgan Chase Code for Good 2025 Finalist</h3>
+                        <p>Selected among 186 out of 60,000+ applicants to be selected for the Code for Good hackathon.
+                            Built a Milestone Development Tracking project for SpacECE India Foundation as part of the
+                            hackathon.</p>
+                    </div>
+                    <div class="achievement-card">
+                        <img src="achievement_google.png" alt="Google Solution Challenge" class="achievement-image">
+                        <i class="fas fa-lightbulb highlight"></i>
+                        <h3>Google Solution Challenge 2025 Finalist</h3>
+                        <p>Made it to the top 105 teams out of 3000+ teams and 60,000+ applicants with our project on
+                            sustainability and climate change. Received expert mentorship for Google Developer Groups On
+                            Campus.</p>
+                    </div>
+                    <div class="achievement-card">
+                        <img src="achievement_coding.png" alt="Problem Solving" class="achievement-image">
+                        <i class="fas fa-code highlight"></i>
+                        <h3>Problem Solving</h3>
+                        <p>Solved 500+ data structures and algorithms problems across platforms like LeetCode,
+                            Codeforces,
+                            GeeksforGeeks and HackerRank.</p>
+                    </div>
+                    <div class="achievement-card">
+                        <img src="achievement_dean.png" alt="Dean's List Top 10%" class="achievement-image">
+                        <i class="fas fa-code highlight"></i>
+                        <h3>Dean's List</h3>
+                        <p>Secured Dean's List for being in the top 10% students in the university.</p>
+                    </div>
+                    <div class="achievement-card">
+                        <img src="achievement_essay.jpeg" alt="Essay Writing" class="achievement-image">
+                        <i class="fas fa-code highlight"></i>
+                        <h3>🥇in Literary Fest-Essay Writing Competition</h3>
+                        <p>Got gold medal in university-level essay writing competition. Wrote on-the-spot about "Mental
+                            Health Advocacy".</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -404,8 +431,9 @@
             <div class="contact-content fade-in">
                 <p class="pre-title"><span class="highlight">08.</span> What's Next?</p>
                 <h2 class="title">Get In Touch</h2>
-                <p class="description">I'm currently looking for new opportunities as an SDE. Whether you have a
-                    question or just want to say hi, I'll try my best to get back to you!</p>
+                <p class="description">I'm currently looking for new opportunities as an SDE. Whether you have a job
+                    opportunity
+                    or just want to network, drop a message and I'll get back to you!</p>
                 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=amrutha.maddipati@gmail.com"
                     class="btn-primary large">Email</a>
             </div>

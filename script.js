@@ -62,4 +62,19 @@ document.addEventListener('DOMContentLoaded', () => {
             blurs[1].style.transform = `translate(${x * 20}px, ${y * 20}px)`;
         }
     });
+
+    const leftBtn = document.getElementById('achievements-left');
+    const rightBtn = document.getElementById('achievements-right');
+    const slider = document.getElementById('achievements-slider');
+
+    if (leftBtn && rightBtn && slider) {
+        leftBtn.addEventListener('click', () => {
+            const cardWidth = slider.querySelector('.achievement-card').offsetWidth + 20; // 20 is the gap
+            slider.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+        });
+        rightBtn.addEventListener('click', () => {
+            const cardWidth = slider.querySelector('.achievement-card').offsetWidth + 20;
+            slider.scrollBy({ left: cardWidth, behavior: 'smooth' });
+        });
+    }
 });
