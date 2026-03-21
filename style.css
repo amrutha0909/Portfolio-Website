@@ -249,6 +249,86 @@ nav .btn-primary {
     line-height: 1.1;
     color: var(--text-alt);
     margin-bottom: 20px;
+    display: grid;
+}
+
+.hero .role {
+    font-size: clamp(30px, 6vw, 60px);
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--text-alt);
+    margin-bottom: 20px;
+
+    position: relative;
+    height: 1.2em;
+    /* keeps both texts in same line */
+    overflow: hidden;
+}
+
+.animated-role {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+
+    opacity: 0;
+    animation: fadeSwitch 4s infinite;
+}
+
+.animated-role:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.animated-role:nth-child(2) {
+    animation-delay: 2s;
+}
+
+@keyframes fadeSwitch {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeSwitch {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    10% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    40% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    50% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
 .hero .summary {
@@ -381,17 +461,22 @@ nav .btn-primary {
     transition: var(--transition);
 }
 
-/* .project-overlay {
+.project-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(100, 255, 218, 0.3);
+    background-color: rgba(100, 255, 218, 0.1);
     transition: var(--transition);
-} */
+    pointer-events: none;
+}
 
 .project-image:hover {
+    background-color: transparent;
+}
+
+.project-image:hover .project-overlay {
     background-color: transparent;
 }
 
@@ -556,12 +641,33 @@ nav .btn-primary {
     background-color: var(--bg-color-alt);
     box-shadow: 0 4px 15px rgba(2, 12, 27, 0.5);
     border: 1px solid var(--bg-color-light);
+    position: relative;
 }
 
 .timeline-image img {
     width: 100%;
     display: block;
     object-fit: contain;
+    transition: var(--transition);
+}
+
+.timeline-image:hover img {
+    transform: scale(1.02);
+}
+
+.timeline-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(100, 255, 218, 0.1);
+    transition: var(--transition);
+    pointer-events: none;
+}
+
+.timeline-image:hover .timeline-overlay {
+    background-color: transparent;
 }
 
 #training .timeline {
@@ -713,13 +819,41 @@ nav .btn-primary {
     background-color: var(--bg-color-light);
 }
 
-.achievement-image {
+.achievement-image-wrapper {
+    position: relative;
     width: 100%;
     aspect-ratio: 1/1;
-    object-fit: fill;
-    border-radius: var(--border-radius);
     margin-bottom: 20px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
     background-color: var(--bg-color-light);
+}
+
+.achievement-image {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    display: block;
+    transition: var(--transition);
+}
+
+.achievement-card:hover .achievement-image {
+    transform: scale(1.02);
+}
+
+.achievement-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(100, 255, 218, 0.1);
+    transition: var(--transition);
+    pointer-events: none;
+}
+
+.achievement-card:hover .achievement-overlay {
+    background-color: transparent;
 }
 
 .achievement-card i {
